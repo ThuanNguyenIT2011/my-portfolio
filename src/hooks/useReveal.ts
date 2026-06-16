@@ -1,25 +1,29 @@
-import { useEffect, useRef } from 'react'
+import { useCallback, useRef } from 'react'
 
 export function useReveal<T extends HTMLElement>(threshold = 0.15) {
-  const ref = useRef<T>(null)
+  const observerRef = useRef<IntersectionObserver | null>(null)
 
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
+  const ref = useCallback(
+    (el: T | null) => {
+      if (observerRef.current) {
+        observerRef.current.disconnect()
+        observerRef.current = null
+      }
+      if (!el) return
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add('visible')
-          observer.unobserve(el)
-        }
-      },
-      { threshold }
-    )
-
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [threshold])
+      observerRef.current = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            el.classList.add('visible')
+            observerRef.current?.disconnect()
+          }
+        },
+        { threshold }
+      )
+      observerRef.current.observe(el)
+    },
+    [threshold]
+  )
 
   return ref
 }
