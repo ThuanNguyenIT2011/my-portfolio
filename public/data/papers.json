@@ -1,0 +1,26 @@
+[
+  {
+    "id": "paper-1",
+    "title": "VADViT: Vision Transformer-Driven Memory Forensics for Malicious Process Detection and Explainable Threat Attribution",
+    "authors": ["Nguyễn Văn Thuận", "Nguyễn Văn A", "Trần Thị B"],
+    "venue": "IEEE Access",
+    "type": "Journal",
+    "year": 2026,
+    "doi": "",
+    "url": "",
+    "abstract": "Bài báo đề xuất phương pháp VADViT sử dụng Vision Transformer để phân tích pháp lý bộ nhớ, phát hiện tiến trình độc hại và giải thích mối đe dọa một cách trực quan. Kết quả thực nghiệm cho thấy độ chính xác vượt trội so với các phương pháp truyền thống.",
+    "tags": ["Malware Detection", "Deep Learning", "Vision Transformer", "Memory Forensics"]
+  },
+  {
+    "id": "paper-2",
+    "title": "Low-Code Platform Adoption in Enterprise Digital Transformation: A Case Study on Power Platform",
+    "authors": ["Nguyễn Văn Thuận", "Lê Văn C"],
+    "venue": "International Conference on Information Systems (ICIS 2025)",
+    "type": "Conference",
+    "year": 2025,
+    "doi": "",
+    "url": "",
+    "abstract": "Nghiên cứu phân tích quá trình áp dụng nền tảng low-code Microsoft Power Platform trong chuyển đổi số doanh nghiệp Việt Nam thông qua nghiên cứu tình huống tại 5 tổ chức lớn.",
+    "tags": ["Low-code", "Digital Transformation", "Power Platform", "Enterprise"]
+  }
+]

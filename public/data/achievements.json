@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ach-1",
+    "title": "Microsoft Certified: Power Platform Developer Associate",
+    "issuer": "Microsoft",
+    "date": "2024",
+    "description": "Chứng chỉ chuyên môn về phát triển ứng dụng doanh nghiệp trên nền tảng Microsoft Power Platform."
+  },
+  {
+    "id": "ach-2",
+    "title": "Microsoft Certified: Azure AI Fundamentals (AI-900)",
+    "issuer": "Microsoft",
+    "date": "2023",
+    "description": "Chứng chỉ về nền tảng AI và Machine Learning trên Azure, bao gồm Computer Vision, NLP và AI Document Intelligence."
+  },
+  {
+    "id": "ach-3",
+    "title": "Giải Nhì – Cuộc thi Lập trình Sáng tạo PTIT 2020",
+    "issuer": "Học viện Công nghệ Bưu chính Viễn thông",
+    "date": "2020",
+    "description": "Đề tài: Hệ thống nhận diện khuôn mặt điểm danh tự động sử dụng OpenCV và Deep Learning."
+  },
+  {
+    "id": "ach-4",
+    "title": "Học bổng Khuyến khích Học tập loại Xuất sắc",
+    "issuer": "PTIT",
+    "date": "2019 – 2021",
+    "description": "Nhận học bổng 4 học kỳ liên tiếp với GPA đạt 3.7/4.0."
+  }
+]

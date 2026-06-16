@@ -1,0 +1,13 @@
+{
+  "name": "Nguyễn Văn Thuận",
+  "title": "Full-stack Developer | IT Professional | Researcher",
+  "avatar": "images/avatar.jpg",
+  "tagline": "Đam mê công nghệ, nghiên cứu và xây dựng giải pháp thực tiễn.",
+  "bio": "Tôi là một kỹ sư phần mềm và nhà nghiên cứu với kinh nghiệm phát triển ứng dụng doanh nghiệp trên nền tảng Microsoft Power Platform, đồng thời đang theo đuổi nghiên cứu về bảo mật thông tin và học máy tại PTIT. Tôi yêu thích việc giải quyết các bài toán phức tạp bằng công nghệ và chia sẻ kiến thức với cộng đồng.",
+  "location": "Hà Nội, Việt Nam",
+  "email": "thuannit2011@gmail.com",
+  "socials": [
+    { "label": "GitHub", "url": "https://github.com/ThuanNguyenIT2011", "icon": "github" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/thuannguyen", "icon": "linkedin" }
+  ]
+}

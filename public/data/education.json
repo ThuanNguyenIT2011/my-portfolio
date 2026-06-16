@@ -1,0 +1,18 @@
+[
+  {
+    "id": "edu-2",
+    "period": "2025 – 2027",
+    "school": "Học viện Công nghệ Bưu chính Viễn thông (PTIT)",
+    "major": "Hệ thống Thông tin",
+    "degree": "Master",
+    "description": "Lớp M25CQHT02-N (khóa cao học). Hướng nghiên cứu: An toàn thông tin, Học máy ứng dụng trong phát hiện mã độc."
+  },
+  {
+    "id": "edu-1",
+    "period": "2016 – 2021",
+    "school": "Học viện Công nghệ Bưu chính Viễn thông (PTIT)",
+    "major": "Hệ thống Thông tin",
+    "degree": "Bachelor",
+    "description": "Tốt nghiệp loại Giỏi. Đề tài khóa luận: Xây dựng hệ thống quản lý tài liệu dùng công nghệ OCR."
+  }
+]
