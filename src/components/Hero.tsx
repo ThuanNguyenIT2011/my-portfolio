@@ -23,7 +23,7 @@ export default function Hero({ profile }: HeroProps) {
             <img
               src={`${import.meta.env.BASE_URL}${profile.avatar.replace(/^\//, '')}`}
               alt={`Ảnh đại diện của ${profile.name}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
               onError={(e) => {
                 const t = e.currentTarget
                 t.style.display = 'none'
