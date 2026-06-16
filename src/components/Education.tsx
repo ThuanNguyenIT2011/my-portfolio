@@ -3,6 +3,7 @@ import SectionTitle from './SectionTitle'
 import LoadingSpinner from './LoadingSpinner'
 import ErrorMessage from './ErrorMessage'
 import { useFetch } from '../hooks/useFetch'
+import { useReveal } from '../hooks/useReveal'
 import { GraduationCap } from 'lucide-react'
 
 const DEGREE_STYLES: Record<DegreeType, string> = {
@@ -19,6 +20,7 @@ const DEGREE_LABEL: Record<DegreeType, string> = {
 
 export default function Education() {
   const { data, loading, error } = useFetch<EducationType[]>('data/education.json')
+  const listRef = useReveal<HTMLDivElement>(0.1)
 
   return (
     <section id="education" className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
@@ -29,9 +31,9 @@ export default function Education() {
         <div className="relative">
           {/* Vertical line */}
           <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-700 hidden sm:block" />
-          <div className="flex flex-col gap-8">
+          <div ref={listRef} className="reveal-stagger flex flex-col gap-8">
             {data.map((edu) => (
-              <div key={edu.id} className="flex gap-6 animate-slide-up">
+              <div key={edu.id} className="flex gap-6">
                 {/* Dot */}
                 <div className="hidden sm:flex flex-col items-center">
                   <div className="w-12 h-12 rounded-xl bg-accent-50 dark:bg-accent-900/30 border-2 border-accent-200 dark:border-accent-700 flex items-center justify-center flex-shrink-0 z-10">

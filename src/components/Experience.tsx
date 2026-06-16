@@ -5,6 +5,8 @@ import SectionTitle from './SectionTitle'
 import LoadingSpinner from './LoadingSpinner'
 import ErrorMessage from './ErrorMessage'
 import { useFetch } from '../hooks/useFetch'
+import { useReveal } from '../hooks/useReveal'
+import { useTilt } from '../hooks/useTilt'
 
 interface ProjectModalProps {
   company: string
@@ -85,9 +87,48 @@ function ProjectModal({ company, projects, onClose }: ProjectModalProps) {
   )
 }
 
+function TiltCard({ exp, onClick }: { exp: ExperienceType; onClick: () => void }) {
+  const { ref, onMouseMove, onMouseLeave } = useTilt<HTMLButtonElement>(6)
+  return (
+    <button
+      ref={ref}
+      onClick={onClick}
+      onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
+      className="tilt-card text-left group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 hover:border-accent-400 transition-all focus:outline-none focus:ring-2 focus:ring-accent-500"
+      aria-label={`Xem dự án tại ${exp.company}`}
+    >
+      <div className="flex items-start justify-between gap-3 mb-4">
+        <div className="w-12 h-12 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700 flex items-center justify-center flex-shrink-0">
+          {exp.logo ? (
+            <img
+              src={`${import.meta.env.BASE_URL}${exp.logo.replace(/^\//, '')}`}
+              alt={exp.company}
+              className="w-full h-full object-contain p-1"
+              onError={(e) => { e.currentTarget.style.display = 'none' }}
+            />
+          ) : (
+            <Briefcase size={20} className="text-gray-400" />
+          )}
+        </div>
+        <ChevronRight size={16} className="text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1" />
+      </div>
+      <span className="text-xs font-mono text-gray-400 dark:text-gray-500">{exp.period}</span>
+      <h3 className="font-semibold text-gray-900 dark:text-white mt-1 mb-1">{exp.company}</h3>
+      <p className="text-sm text-accent-600 dark:text-accent-400 font-medium mb-1">{exp.position}</p>
+      <p className="text-xs text-gray-400 dark:text-gray-500 mb-3">{exp.field}</p>
+      <p className="text-xs text-gray-500 dark:text-gray-400">
+        {exp.projects.length} dự án
+        <span className="ml-1 text-accent-500 group-hover:underline">→ xem chi tiết</span>
+      </p>
+    </button>
+  )
+}
+
 export default function Experience() {
   const { data, loading, error } = useFetch<ExperienceType[]>('data/experience.json')
   const [selected, setSelected] = useState<ExperienceType | null>(null)
+  const gridRef = useReveal<HTMLDivElement>(0.1)
 
   const openModal = useCallback((exp: ExperienceType) => setSelected(exp), [])
   const closeModal = useCallback(() => setSelected(null), [])
@@ -98,50 +139,9 @@ export default function Experience() {
       {loading && <LoadingSpinner />}
       {error && <ErrorMessage message={error} />}
       {data && (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div ref={gridRef} className="reveal-stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {data.map((exp) => (
-            <button
-              key={exp.id}
-              onClick={() => openModal(exp)}
-              className="text-left group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 hover:border-accent-400 hover:shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-accent-500"
-              aria-label={`Xem dự án tại ${exp.company}`}
-            >
-              <div className="flex items-start justify-between gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700 flex items-center justify-center flex-shrink-0">
-                  {exp.logo ? (
-                    <img
-                      src={`${import.meta.env.BASE_URL}${exp.logo.replace(/^\//, '')}`}
-                      alt={exp.company}
-                      className="w-full h-full object-contain p-1"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none'
-                      }}
-                    />
-                  ) : (
-                    <Briefcase size={20} className="text-gray-400" />
-                  )}
-                </div>
-                <ChevronRight
-                  size={16}
-                  className="text-gray-300 dark:text-gray-600 group-hover:text-accent-500 transition-colors flex-shrink-0 mt-1"
-                />
-              </div>
-
-              <span className="text-xs font-mono text-gray-400 dark:text-gray-500">
-                {exp.period}
-              </span>
-              <h3 className="font-semibold text-gray-900 dark:text-white mt-1 mb-1">
-                {exp.company}
-              </h3>
-              <p className="text-sm text-accent-600 dark:text-accent-400 font-medium mb-1">
-                {exp.position}
-              </p>
-              <p className="text-xs text-gray-400 dark:text-gray-500 mb-3">{exp.field}</p>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                {exp.projects.length} dự án
-                <span className="ml-1 text-accent-500 group-hover:underline">→ xem chi tiết</span>
-              </p>
-            </button>
+            <TiltCard key={exp.id} exp={exp} onClick={() => openModal(exp)} />
           ))}
         </div>
       )}
