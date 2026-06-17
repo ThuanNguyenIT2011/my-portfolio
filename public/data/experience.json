@@ -2,10 +2,10 @@
   {
     "id": "exp-1",
     "period": "2023 – Hiện tại",
-    "company": "Công ty CP Giải pháp Công nghệ XYZ",
+    "company": "CÔNG TY TNHH EASY-DT",
     "position": "Full-stack / Power Platform Developer",
     "field": "IT Services / Low-code Solutions",
-    "logo": "images/company1.png",
+    "logo": "images/edt.png",
     "projects": [
       {
         "id": "prj-1",
@@ -24,7 +24,7 @@
         "role": "Lead Developer"
       }
     ]
-  },
+  }/*,
   {
     "id": "exp-2",
     "period": "2021 – 2023",
@@ -50,5 +50,5 @@
         "role": "Mobile Developer"
       }
     ]
-  }
+  }*/
 ]
