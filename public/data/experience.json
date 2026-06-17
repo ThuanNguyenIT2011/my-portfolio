@@ -24,31 +24,5 @@
         "role": "Lead Developer"
       }
     ]
-  }/*,
-  {
-    "id": "exp-2",
-    "period": "2021 – 2023",
-    "company": "Tập đoàn Viễn thông ABC",
-    "position": "Software Engineer",
-    "field": "Telecommunications / Enterprise Software",
-    "logo": "images/company2.png",
-    "projects": [
-      {
-        "id": "prj-3",
-        "period": "2022 – 2023",
-        "name": "Hệ thống CRM khách hàng doanh nghiệp",
-        "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "Docker"],
-        "description": "Xây dựng hệ thống quản lý quan hệ khách hàng cho phân khúc doanh nghiệp lớn (B2B). Hỗ trợ hơn 500 nhân viên kinh doanh và quản lý dữ liệu 50,000+ khách hàng.",
-        "role": "Backend Developer"
-      },
-      {
-        "id": "prj-4",
-        "period": "2021 – 2022",
-        "name": "Ứng dụng mobile chăm sóc khách hàng",
-        "technologies": ["React Native", "TypeScript", "Firebase", "REST API"],
-        "description": "Phát triển ứng dụng mobile giúp khách hàng tra cứu thông tin dịch vụ, nộp hồ sơ và theo dõi tiến trình xử lý. Đạt 4.5 sao trên App Store với 10,000+ lượt tải.",
-        "role": "Mobile Developer"
-      }
-    ]
-  }*/
+  }
 ]
