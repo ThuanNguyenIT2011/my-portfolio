@@ -1,30 +1,51 @@
 [
   {
     "id": "ach-1",
-    "title": "Microsoft Certified: Power Platform Developer Associate",
-    "issuer": "Microsoft",
-    "date": "2024",
-    "description": "Chứng chỉ chuyên môn về phát triển ứng dụng doanh nghiệp trên nền tảng Microsoft Power Platform."
+    "title": "Quyết định khen thưởng Sinh viên HK1, Năm học 2022-2023",
+    "issuer": "TTR - Cấp Trường",
+    "date": "30/10/2023",
+    "description": ""
   },
   {
     "id": "ach-2",
-    "title": "Microsoft Certified: Azure AI Fundamentals (AI-900)",
-    "issuer": "Microsoft",
-    "date": "2023",
-    "description": "Chứng chỉ về nền tảng AI và Machine Learning trên Azure, bao gồm Computer Vision, NLP và AI Document Intelligence."
+    "title": "Quyết định khen thưởng Sinh viên HK2, Năm học 2022-2023",
+    "issuer": "TTR - Cấp Trường",
+    "date": "20/10/2023",
+    "description": ""
   },
   {
     "id": "ach-3",
-    "title": "Giải Nhì – Cuộc thi Lập trình Sáng tạo PTIT 2020",
-    "issuer": "Học viện Công nghệ Bưu chính Viễn thông",
-    "date": "2020",
-    "description": "Đề tài: Hệ thống nhận diện khuôn mặt điểm danh tự động sử dụng OpenCV và Deep Learning."
+    "title": "Quyết định khen thưởng Sinh viên HK1, Năm học 2023-2024",
+    "issuer": "TTR - Cấp Trường",
+    "date": "12/08/2024",
+    "description": ""
   },
   {
     "id": "ach-4",
-    "title": "Học bổng Khuyến khích Học tập loại Xuất sắc",
-    "issuer": "PTIT",
-    "date": "2019 – 2021",
-    "description": "Nhận học bổng 4 học kỳ liên tiếp với GPA đạt 3.7/4.0."
+    "title": "Quyết định khen thưởng Sinh viên HK2, Năm học 2023-2024",
+    "issuer": "TTR - Cấp Trường",
+    "date": "16/12/2024",
+    "description": ""
+  },
+  {
+    "id": "ach-5",
+    "title": "Nghiên cứu khoa học sinh viên năm học 2023-2024",
+    "issuer": "Học viện Công nghệ Bưu chính Viễn thông",
+    "date": "2023 – 2024",
+    "description": "Đạt giải loại Giỏi trong hoạt động Nghiên cứu khoa học sinh viên cấp Trường."
+  },
+  {
+    "id": "ach-6",
+    "title": "Nghiên cứu khoa học sinh viên năm học 2024-2025",
+    "issuer": "Học viện Công nghệ Bưu chính Viễn thông",
+    "date": "2024 – 2025",
+    "description": "Đạt giải loại Giỏi trong hoạt động Nghiên cứu khoa học sinh viên cấp Trường."
+  },
+  {
+    "id": "ach-7",
+    "title": "Top 6 – Cuộc thi AIoT Developer InnoWorks",
+    "issuer": "Ban tổ chức",
+    "date": "2025",
+    "description": "Đạt thành tích Top 6 chung cuộc với đề tài xây dựng hệ thống IoT thời gian thực tích hợp AI nhằm giám sát và dự báo ô nhiễm không khí trong môi trường sản xuất."
   }
 ]
