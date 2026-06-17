@@ -1,5 +1,5 @@
 [
-  {
+  /*{
     "id": "paper-1",
     "title": "VADViT: Vision Transformer-Driven Memory Forensics for Malicious Process Detection and Explainable Threat Attribution",
     "authors": ["Nguyễn Văn Thuận", "Nguyễn Văn A", "Trần Thị B"],
@@ -22,5 +22,5 @@
     "url": "",
     "abstract": "Nghiên cứu phân tích quá trình áp dụng nền tảng low-code Microsoft Power Platform trong chuyển đổi số doanh nghiệp Việt Nam thông qua nghiên cứu tình huống tại 5 tổ chức lớn.",
     "tags": ["Low-code", "Digital Transformation", "Power Platform", "Enterprise"]
-  }
+  }*/
 ]
